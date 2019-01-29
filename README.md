@@ -4,7 +4,7 @@ This is an implementation of the Troika hashing algorithmus on ICE40 FPGAs.
 
 The repository is intended to be used by developers who are considering using Troika in their hardware projects. The board-files are from a PoC which can be used as design example.
 
-It's not a high-performance solution because it needs multiple clock-cycles per hash-round and the implementation is heavily restricted by the architecture (and logic resources) of ICE40 FPGAs. But the FPGA is very cheap, the PCB can be done by any cheap chinese manufacturer and soldering is doable with a bit of practice. And it's a lot faster than doing hash calculations only in software if using e.g. auto-padding and/or multi-hash-loops. IOTA library functions can benefit much because 1. it works much with 243Trit vectors and 2. they often do multiple hashing loops (e.g. address generation, signing).
+It's not a high-performance solution because it needs multiple clock-cycles per hash-round and the implementation is heavily restricted by logic resources and achievable speed of ICE40 FPGAs. But the FPGA is very cheap, the PCB can be done by any cheap chinese manufacturer and soldering is doable with a bit of practice. And it's a lot faster than doing hash calculations only in software if using e.g. auto-padding and/or multi-hash-loops. IOTA library functions can benefit much because 1. it works much with 243Trit vectors and 2. they often do multiple hashing loops (e.g. address generation, signing).
 
 Support for this repository is limited because it's just a PoC and intended for experienced developers. (by the way, it's the same PCB as for the PoWChip PoC - for Troika the GSM/BT/GPS modul is not needed and software for it is not included in the repository).
 
