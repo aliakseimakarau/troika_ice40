@@ -2,12 +2,12 @@ This is an implementation of the Troika hashing algorithmus on ICE40 FPGAs.
 
 The repository is intended to be used by developers who are considering using Troika in their hardware projects. The board-files are from a PoC which can be used as design example.
 
-It's not a high-performance solution because it needs multiple clock-cycles per hash-round but it's a lot faster than doing hash calculations only in software if using e.g. auto-padding and/or multi-hash-loops. IOTA library functions can benefit much because 1. the work much with 243Trit vectors and 2. they often do multiple hashing loops (e.g. address generation, signing).
+It's not a high-performance solution because it needs multiple clock-cycles per hash-round and the implementation is heavily restricted by the architecture (and logic resources) of ICE40 FPGAs. But the FPGA is very cheap, the PCB can be done by any cheap chinese manufacturer and soldering is doable with a bit of practice. And it's a lot faster than doing hash calculations only in software if using e.g. auto-padding and/or multi-hash-loops. IOTA library functions can benefit much because 1. the work much with 243Trit vectors and 2. they often do multiple hashing loops (e.g. address generation, signing).
 
 Some features:
 - ICE40UP5K ($5 FPGA in QFN package)
 - FPGA about 73% utilized
-- running at 32MHz (uses internal 48MHz oscillator + PLL; no external oscillator required)
+- running at 36MHz (uses internal 48MHz oscillator + PLL; no external oscillator required)
 - Data-transfers via SPI
 - It needs 55 clock cycles per hash
 - It can do auto-padding for 243Trit input size (single Block; in IOTA used a lot)
@@ -22,6 +22,8 @@ This repository contains:
 - Radiant project files for ICE40 FPGAs with VHDL source files
 - Example Board-Design
 - Eclipse project with code for STM32F302
+
+Just a small note ... A synthesized ICE40 Bitstream is included in the STM32-code (bitstream.h)
 
 
 If you like my work please consider donating:
