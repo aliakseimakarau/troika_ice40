@@ -1,0 +1,1 @@
+xxd -i ../../iota_vhdl_pow/ice40_troika/impl_1/powchip1_impl_1.bin  | sed -e 's|______iota_vhdl_pow_ice40_troika_impl_1_powchip1_impl_1_bin|powchip1_impl_1_bin|g' -e 's|unsigned char|const unsigned char|g' > bitstream.h
