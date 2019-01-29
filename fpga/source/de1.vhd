@@ -1,9 +1,11 @@
--- IOTA Pearl Diver VHDL Port
+-- Troika for ICE40-FPGA
 --
 -- 2018 by Thomas Pototschnig <microengineer18@gmail.com,
 -- http://microengineer.eu
 -- discord: pmaxuw#8292
---
+-- donations-address: 
+--     LLEYMHRKXWSPMGCMZFPKKTHSEMYJTNAZXSAYZGQUEXLXEEWPXUNWBFDWESOJVLHQHXOPQEYXGIRBYTLRWHMJAOSHUY
+-- 
 -- Permission is hereby granted, free of charge, to any person obtaining
 -- a copy of this software and associated documentation files (the
 -- "Software"), to deal in the Software without restriction, including
@@ -22,6 +24,7 @@
 -- LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 -- OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 -- WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWAR
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
