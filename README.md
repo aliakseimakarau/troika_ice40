@@ -8,7 +8,7 @@ It's not a high-performance solution because it needs multiple clock-cycles per 
 
 Support for this repository is limited because it's just a PoC and intended for experienced developers. (by the way, it's the same PCB as for the PoWChip PoC - for Troika the GSM/BT/GPS modul is not needed and software for it is not included in the repository).
 
-Some features:
+Some features (FPGA):
 - ICE40UP5K ($5 FPGA in QFN package)
 - FPGA about 73% utilized
 - running at 36MHz (uses internal 48MHz oscillator + PLL; no external oscillator required)
@@ -17,6 +17,13 @@ Some features:
 - It can do auto-padding for 243Trit input size (single Block; in IOTA used a lot)
 - It can do multiple loops with auto-padding (this is interesting for e.g. IOTA where often a block has to be hashed multiple times; It reduces transfer-times significantly)
 - It supports nested hashing by "push"ing" and "pop"ing the internal Troika state to and from a "Stack" (actually, it's an internal offset for RAM address but it acts like a stack).
+
+PCB:
+- ICE40UP5K FPGA
+- STM32F302CCTx µC (default DFU Bootloader can be used)
+- Pinheader for GSM/GPS/BT module (not used in this application)
+- Some LEDs, Buttons
+- SWD Debug header
 
 Performance:
 - 10k blocks (including SPI transfer times) in 11.6s
